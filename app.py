@@ -1,22 +1,31 @@
 import tkinter as tk
+from tkinter import messagebox
 
 def calculate_total():
-    customer = customer_entry.get()
-    item = item_entry.get()
-    quantity = int(quantity_entry.get())
-    price = float(price_entry.get())
+    try:
+        customer = customer_entry.get()
+        item = item_entry.get()
+        quantity = int(quantity_entry.get())
+        price = float(price_entry.get())
 
-    subtotal = quantity * price
-    tax = subtotal * 0.07
-    total = subtotal + tax
+        if customer == "" or item == "":
+            messagebox.showerror("Input Error", "Please enter customer and item information.")
+            return
 
-    result_label.config(
-        text=f"Customer: {customer}\n"
-             f"Item: {item}\n"
-             f"Subtotal: ${subtotal:.2f}\n"
-             f"Tax: ${tax:.2f}\n"
-             f"Total: ${total:.2f}"
-    )
+        subtotal = quantity * price
+        tax = subtotal * 0.07
+        total = subtotal + tax
+
+        result_label.config(
+            text=f"Customer: {customer}\n"
+                 f"Item: {item}\n"
+                 f"Subtotal: ${subtotal:.2f}\n"
+                 f"Tax: ${tax:.2f}\n"
+                 f"Total: ${total:.2f}"
+        )
+
+    except ValueError:
+        messagebox.showerror("Input Error", "Please enter valid numbers for quantity and price.")
 
 root = tk.Tk()
 root.title("Invoice Management System")
@@ -46,5 +55,7 @@ calculate_button.pack(pady=10)
 
 result_label = tk.Label(root, text="Invoice total will appear here.", justify="left")
 result_label.pack(pady=15)
+
+root.mainloop()
 
 root.mainloop()
