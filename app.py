@@ -27,6 +27,13 @@ def calculate_total():
     except ValueError:
         messagebox.showerror("Input Error", "Please enter valid numbers for quantity and price.")
 
+def clear_fields():
+    customer_entry.delete(0, tk.END)
+    item_entry.delete(0, tk.END)
+    quantity_entry.delete(0, tk.END)
+    price_entry.delete(0, tk.END)
+    result_label.config(text="Invoice total will appear here.")
+
 root = tk.Tk()
 root.title("Invoice Management System")
 root.geometry("400x400")
@@ -53,9 +60,10 @@ price_entry.pack()
 calculate_button = tk.Button(root, text="Calculate Total", command=calculate_total)
 calculate_button.pack(pady=10)
 
+clear_button = tk.Button(root, text="Clear", command=clear_fields)
+clear_button.pack()
+
 result_label = tk.Label(root, text="Invoice total will appear here.", justify="left")
 result_label.pack(pady=15)
-
-root.mainloop()
 
 root.mainloop()
