@@ -6,12 +6,14 @@ This project is a desktop-based Invoice Management System built using Python and
 
 ## Sprint 1 (Planning & Setup)
 
-- [x] Brainstormed project idea based on creating invoices for customers
-- [x] Chose Python and Tkinter for the application
-- [x] Set up initial project files
-- [x] Create basic window layout
-- [x] Plan invoice fields and buttons
-
+- [x] Selected invoice system as approved project topic
+- [x] Created GitHub account and joined the KSU-IS GitHub organization
+- [x] Created/claimed ownership of project repository in the class GitHub organization
+- [x] Edited and committed changes to README.md
+- [x] Created projectroadmap.md to track progress
+- [x] Explored an existing Python/Tkinter invoice or billing codebase
+- [x] Attempted to run the example codebase locally
+- [ ] Added notes about what I learned from the example codebase
 ## Sprint 2 (Core Development)
 
 - [ ] Create customer information section
