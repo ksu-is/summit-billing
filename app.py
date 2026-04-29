@@ -1,7 +1,22 @@
 import tkinter as tk
 
 def calculate_total():
-    result_label.config(text="Calculation feature will be added next.")
+    customer = customer_entry.get()
+    item = item_entry.get()
+    quantity = int(quantity_entry.get())
+    price = float(price_entry.get())
+
+    subtotal = quantity * price
+    tax = subtotal * 0.07
+    total = subtotal + tax
+
+    result_label.config(
+        text=f"Customer: {customer}\n"
+             f"Item: {item}\n"
+             f"Subtotal: ${subtotal:.2f}\n"
+             f"Tax: ${tax:.2f}\n"
+             f"Total: ${total:.2f}"
+    )
 
 root = tk.Tk()
 root.title("Invoice Management System")
