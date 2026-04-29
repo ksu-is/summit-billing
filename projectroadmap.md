@@ -13,14 +13,14 @@ This project is a desktop-based Invoice Management System built using Python and
 - [x] Created projectroadmap.md to track progress
 - [x] Explored an existing Python/Tkinter invoice or billing codebase
 - [x] Attempted to run the example codebase locally
-- [ ] Added notes about what I learned from the example codebase
+- [x] Added notes about what I learned from the example codebase
 ## Sprint 2 (Core Development)
 
-- [ ] Create customer information section
-- [ ] Add item name, quantity, and price fields
-- [ ] Build invoice table/list display
-- [ ] Add subtotal, tax, and total calculations
-- [ ] Create clear/reset button
+- [x] Create customer information section
+- [x] Add item name, quantity, and price fields
+- [x] Build invoice table/list display
+- [x] Add subtotal, tax, and total calculations
+- [x] Create clear/reset button
 
 ## Sprint 3 (In Progress)
 
